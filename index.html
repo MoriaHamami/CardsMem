@@ -19,8 +19,9 @@
 
 <header>
     <div id="headline"><b> משחק הזיכרון צהל</b></div>
-    <row class="header_btn_clk"> <div id="clock">00:00</div></row>
-    <row class="header_btn_clk"> <button onclick="startTimer()"><i class="bi bi-caret-right"></i>START</button>
+    <hr>
+    <row class="header_clk"> <div id="clock">00:00</div></row>
+    <row class="header_btn"> <button onclick="startTimer()"><i class="bi bi-caret-right"></i>START</button>
     <button onclick="resetTimer();"; ><i class="bi bi-arrow-clockwise"></i>START AGAIN</button> </row>
 </header>
 
@@ -31,23 +32,28 @@
         
         <div class="card">
             <div class="card__face card__face--front">
-                <img class="card-back-image" src="images/cardbackgorud.jpg"style="width: 130px;" height="180px" >
+                <img class="card-back-image" src="images/צילום מסך 2024-04-10 191528.png" style="width: 130px;" height="180px" >
             </div>
 
             <div class="card__face card__face--back">
-                <img class="unit_image" src="images/givaty.png" style="max-width: 100px ;max-height: 130px ;">גבעתי
+                <img class="unit_image" src="images/givaty.png" style="max-width: 100px ;max-height: 130px ;">
+                <div class="card_text">גבעתי</div>
             </div>
+      </div>
+
+        
+     <div class="card">
+        <div class="card__face card__face--front">
+            <img class="card-back-image" src="images/צילום מסך 2024-04-10 191528.png" style="width: 130px;" height="180px" >
         </div>
 
-        <div class="card">
-            <div class="card__face card__face--front">
-                <img class="card-back-image" src="images/cardbackgorud.jpg"style="width: 130px;" height="180px" >
-            </div>
-
-            <div class="card__face card__face--back">
-                <img class="unit_image" src="images/bahad1.png" style="max-width: 100px ;max-height: 130px ;">בה"ד 1
-            </div>
+        <div class="card__face card__face--back">
+            <img class="unit_image" src="images/bahad1.png" style="max-width: 110px ;max-height: 130px ;">
+            <div class="card_text">בה"ד 1</div>
         </div>
+     </div>
+
+     
 
 
         
@@ -63,6 +69,8 @@
 
   
     </div>
+
+
 </main>
 
 <script src="script.js"></script>

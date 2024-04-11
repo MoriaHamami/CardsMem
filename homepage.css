@@ -1,0 +1,58 @@
+@font-face {
+    font-family:yarden_bold ;
+    src: url(fonts/yarden-bold-alefalefalef.otf);
+  }
+
+video#background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: 100vw;
+    height: auto;
+    z-index: -1;
+}
+
+.start_button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+
+    border: 10px;
+    
+    color: black;
+    font-family:yarden_bold;
+    font-size: 60px;
+    
+
+}
+
+#start_button
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 3px auto;
+
+    background-color: transparent;
+    border-radius: 5px solid black;
+}
+
+.form-group
+{
+    display: flex;
+     flex-direction: column;
+    justify-content: space-between;
+    
+    margin-left: 150px;
+    border: 10px;
+    background-color: transparent;
+    border-radius: 5px solid black;
+    color: black;
+    width: 20%; 
+}
