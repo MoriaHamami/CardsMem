@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap'); */
 
 .timer *{
   margin: 0;
@@ -7,18 +7,11 @@
   font-family: 'Poppins', sans-serif;
 
 }
-@font-face {
+/* @font-face {
   font-family: 'Digital-7';
   src: url('digital-7.ttf');
-}
-/* .timer{
-  background-color: #eb4d4b;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 } */
+
 .timer .box{
   background-color: #fff;
   height: 200px;
@@ -38,12 +31,6 @@
   gap: 3px;
 }
 
-.timer h3{
-  font-weight: 500;
-  color:#130f40;
-  text-transform: uppercase;
-  margin-bottom: 25px;
-}
 .hrs,
 .min,
 .sec,
@@ -55,7 +42,7 @@ font-size: 50px;
 text-align: center;
 line-height: 50px;
 color: #eb4d4b;
-font-family: 'Digital-7';
+/* font-family: 'Digital-7'; */
 }
 .timer .colon{
 width: 10px;

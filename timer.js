@@ -1,16 +1,29 @@
 const btnStart=document.querySelector('.start');
 const btnStop=document.querySelector('.stop');
 const btnReset=document.querySelector('.reset');
+const cards = $('.card');
 
 let hrs=min=sec=ms=0,startTimer;
+let isStarted =false;
+let flippedCards =[];
+
+[...cards].forEach((card) => {
+    card.addEventListener('click', function () {
+        /*היפוך הקלפים כשהשעון מתחיל לרוץ*/
+        if (!isStarted) return;
+        // IF THIS ISNT FIRST OR SECOND CARD RETURN
+        // if (!isStarted || !flippedCards[0].name) return;
+        card.classList.toggle('is-flipped');
+    });
+});
 
 btnStart.addEventListener('click',()=>{
 
   btnStart.classList.add('start-active');
   btnStop.classList.remove('stop-active');
-
+  isStarted = true;
   startTimer=setInterval(()=>{
-    ms++;//ms=ms+1;
+      ms++;//ms=ms+1;
     if(ms==100){
       sec++;
       ms=0;
@@ -28,18 +41,20 @@ btnStart.addEventListener('click',()=>{
 });
 
 btnStop.addEventListener('click',()=>{
-  clearInterval(startTimer);
-  btnStart.classList.remove('start-active');
-  btnStop.classList.add('stop-active');
-
+    clearInterval(startTimer);
+    btnStart.classList.remove('start-active');
+    btnStop.classList.add('stop-active');
+    
+    isStarted=false;
 });
 
 btnReset.addEventListener('click',()=>{
-  hrs=min=sec=ms=0;
-  clearInterval(startTimer);
-  updateDisplay();
-  btnStart.classList.remove('start-active');
-  btnStop.classList.remove('stop-active');
+    hrs=min=sec=ms=0;
+    clearInterval(startTimer);
+    updateDisplay();
+    btnStart.classList.remove('start-active');
+    btnStop.classList.remove('stop-active');
+    isStarted=false;
 });
 
 
