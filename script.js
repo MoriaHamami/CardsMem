@@ -3,6 +3,7 @@ var timerInterval;
 var isStarted = false;
 
 function startTimer() {
+  if(isStarted) return stopTimer()
     var seconds = 0;
     isStarted = true;
 
@@ -30,8 +31,14 @@ function resetTimer() {
     clockDiv.innerText = "00:00";
     isStarted = true;
     startTimer(); // התחל את השעון מחדש
-}
-
+  }
+  
+  function stopTimer() {
+    clearInterval(timerInterval);
+    var clockDiv = document.getElementById('clock');
+    clockDiv.innerText = "00:00";
+    isStarted = false;
+  }
 
 
 /*היפוך הקלפים כשהשעון מתחיל לרוץ*/
