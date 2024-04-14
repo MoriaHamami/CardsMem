@@ -13,35 +13,52 @@
 } */
 
 .timer .box{
-  background-color: #fff;
-  height: 200px;
-  width: 400px;
-  border-radius: 5px;
+  /* background-color: #fff; */
+  /* height: 200px; */
+  /* width: 400px; */
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
+  /* align-self: flex-start; */
+  /* flex-direction: column; */
   user-select: none;
-  cursor: pointer;
-  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  
+  
+  border-radius: 5px;
+  background-color: #D5F3FE;
+   box-shadow: 0 0 3px black, 0 0 5px black;
+padding: 10px;
+  /* box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px; */
 }
 
 .timer .frame{
   display: flex;
   gap: 3px;
+  color: rgb(70, 105, 116);
+  text-shadow: none;
+  font-weight: bold;
+  
 }
+.hrs{
 
+  margin-inline-start: 10px;
+}
+.ms{
+
+  margin-inline-end: 10px;
+}
 .hrs,
 .min,
 .sec,
 .ms,
 .colon{
-width: 50px;
-height: 50px;
-font-size: 50px;
+/* width: 50px; */
+/* height: 50px; */
+font-size: 30px;
 text-align: center;
 line-height: 50px;
-color: #eb4d4b;
+/* color: #eb4d4b; */
 /* font-family: 'Digital-7'; */
 }
 .timer .colon{
@@ -49,19 +66,35 @@ width: 10px;
 height: 50px;
 }
 .timer .buttons{
-  margin-top: 25px;
+  display: flex;
+}
+.timer button:hover{
+  opacity: 0.5;
 }
 .timer .buttons button{
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* margin-inline: 2px; */
  border: none;
- padding: 5px 20px;
- color:white;
+ padding: 5px 10px;
+ color:#D5F3FE;
  border-radius: 3px;
  text-transform: uppercase;
+ /* background-color: #D5F3FE; */
+ background: none;
+ text-shadow: 0 0 3px black, 0 0 5px black;
+ font-size: 30px;
+ cursor: pointer;
+ /* font-weight: bold; */
 }
 
-.timer .start{background-color: #6ab04c;}
+/* .timer .start{background: none;}
+.timer .stop{background: none;}
+.timer .reset{background:  none;} */
+/* .timer .start{background-color: #6ab04c;}
 .timer .stop{background-color: #30336b;}
-.timer .reset{background-color:  #eb4d4b;}
+.timer .reset{background-color:  #eb4d4b;} */
 
 
 .timer .start-active,
