@@ -3,6 +3,11 @@
     src: url(fonts/yarden-bold-alefalefalef.otf);
   }
 
+  @font-face {
+    font-family:yarden_normal ;
+    src: url(fonts/yarden-regular-alefalefalef.otf);
+  }
+
 video#background-video {
     position: fixed;
     top: 50%;
@@ -13,46 +18,106 @@ video#background-video {
     width: 100vw;
     height: auto;
     z-index: -1;
+    opacity: 0.6;
+}
+
+
+@keyframes slide {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+
+#headline
+{
+   
+    font-family:yarden_bold;
+    font-size: 130px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: slide 2s forwards;
+
+   
+
+    margin-top: 40px;
+
+
+    color: #fff; /* צבע טקסט לבן */
+    text-shadow:
+        0 0 5px #fff, /* צל ניאון לבן */
+        0 0 10px #fff, /* צל ניאון לבן */
+        0 0 20px rgb(56, 56, 74), /* צל ניאון כחול */
+        0 0 30px rgb(99, 99, 167), /* צל ניאון כחול */
+        0 0 40px rgb(98, 190, 230), /* צל ניאון כחול */
+        0 0 70px rgb(56, 56, 74), /* צל ניאון כחול */
+        0 0 80px rgb(56, 56, 74), /* צל ניאון כחול */
+        0 0 100px rgb(56, 56, 74); /* צל ניאון כחול */
+
+}
+
+
+
+
+
+.form-group
+{
+       
+    
+    border: 10px;
+    background-color: transparent;
+    border-radius: 5px solid black;
+    color: black;
+ width: 30%; 
+  text-align: center;
+  font-family: yarden_normal;
+  font-size: 30px;
+}
+
+.form-control
+{
+    text-align:end;
+}
+
+form
+{
+    display: flex;
+     flex-direction: column;
+    justify-content:center;
+    margin-left: 50px;
+    margin-top: 30px;
 }
 
 .start_button
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;   
+    font-family:yarden_bold;
+   margin-top: 30px;
+    margin-left: 190px;
+    font-size: 25px;
+}
 
-    border: 10px;
+
+/* .start_button
+{
     
+   
     color: black;
     font-family:yarden_bold;
-    font-size: 60px;
+    
+
+    margin-left: 140px;
+    margin-top: 30px;
+
     
 
 }
 
-#start_button
+button
 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    padding: 3px auto;
-
     background-color: transparent;
-    border-radius: 5px solid black;
-}
-
-.form-group
-{
-    display: flex;
-     flex-direction: column;
-    justify-content: space-between;
-    
-    margin-left: 150px;
     border: 10px;
-    background-color: transparent;
     border-radius: 5px solid black;
-    color: black;
-    width: 20%; 
-}
+   
+
+} */

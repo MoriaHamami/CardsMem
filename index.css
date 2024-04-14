@@ -8,62 +8,58 @@
     src: url(fonts/yarden-regular-alefalefalef.otf);
   }
 
+  /*שורת התחלה*/
 
-
-/*חלק עליון*/
-  #headline
-  {
-    display: flex; 
-    justify-content:center;
-    align-items:center;
-    font-size: 150px;
+.header
+ {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-family: yarden_bold;
-  }
+    background-color: rgb(101 122 143);
+    font-size: 60px;
+    color: rgb(253, 250, 246);
+    height: 60px;
+}
 
-
-
-  #clock
-  {
-    display: flex; 
-    justify-content:center;
-    align-items:center;
-    padding: 10px;
-    font-size: 30px;
-    margin: 5 auto;
-    font-family: math;
-    border: 6px  rgb(8, 8, 8);
-    border-radius: 4px;
-  }
-
-
-.header_btn
-  {
-    display: flex; 
-    justify-content:center;
-    align-items:center;
-    padding: 5px;
-    font-size: 30px;
-    margin: 5 auto;
-    font-family: math;
-  }
-
-
-  /*החלק המרכזי - המשחק*/
- main
+#restart
 {
-  
+  border: none;
+  background-color: transparent;
+  width: 100px;
+  padding: 8px;
+  margin-top: 12px;
+  color: white;
+}
 
+#userGreeting
+{
   display: flex;
- 
+  justify-content: center;
+ text-align: center;
+  background-color: rgb(101 122 143);
+  font-family:yarden_normal ;
+  font-size: 30px;
 }
 
-.container
-{
-  
-height: 800px;
-  
-  
+
+/*רקע המשחק*/
+
+video#background-video
+  {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: 100vw;
+    height: auto;
+    z-index: -1;
+    opacity: 0.5;
 }
+
+/*הקלפים*/
 
 .card 
 {
@@ -81,7 +77,6 @@ height: 800px;
   transform: translateX(-100%) rotateY(-180deg);
 }
 
-
 .card__face
  {
   position: absolute;
@@ -92,7 +87,6 @@ height: 800px;
   backface-visibility: hidden;
   background:transparent;
 }
-
 
 .card__face--back 
 {
@@ -118,7 +112,6 @@ height: 800px;
   border-radius: 10px;
 }
 
-
 .unit_image
 {
   background:transparent;
@@ -127,20 +120,42 @@ height: 800px;
  
 }
 
-.container
-{
+
+/*התראה עבור ניצחון*/
+
+#alertPopup {
+  background-image: url(images/תמונה\ של\ WhatsApp‏\ 2024-04-13\ בשעה\ 20.22.35_aadec0c7.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 400px;
+
+  font-family: yarden_bold;
+  font-size: 60px;
+
+  border: 2px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  display: none;
+  position: fixed;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+
   display: flex;
-  flex-wrap: wrap;
-  justify-content:space-around;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
 }
 
-.card_text
+#closebtn
 {
   display: flex;
-  justify-content:center;
-  align-items:baseline;
+  flex-direction: column;
+  justify-content: center;
+  font: yarden_normal;
+  font-size: 20px;
 }
-
-
-
 
