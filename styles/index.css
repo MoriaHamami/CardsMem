@@ -51,10 +51,23 @@
   /*החלק המרכזי - המשחק*/
  main
 {
-  
+  width: 80%;
 
-  display: flex;
- 
+  /* display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+margin: 0 auto; */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 130px);
+  gap: 20px;
+  justify-content: center;
+margin: 0 auto;
+
+  /* grid-auto-rows: 100px; */
+  /* align-items: center; */
+  /* align-items: center; */
 }
 
 .container
@@ -67,6 +80,12 @@ height: 800px;
 
 .card 
 {
+  /* justify-self: center; */
+  /* text-align: center; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* align-self: center; */
   width: 130px;
   height: 180px;
   transform-style: preserve-3d;
