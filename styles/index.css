@@ -1,0 +1,205 @@
+@font-face {
+    font-family:yarden_bold ;
+    src: url(../fonts/yarden-bold-alefalefalef.otf);
+  }
+
+  @font-face {
+    font-family:yarden_normal ;
+    src: url(../fonts/yarden-regular-alefalefalef.otf);
+  }
+
+body{
+  background-color: #D5F3FE;
+  /* background-color: rgb(214, 232, 234); */
+}
+
+/*חלק עליון*/
+header{
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 90%;
+/* margin: 0 auto; */
+/* padding-block: 50px; */
+margin: 50px;
+/* background-color: #bacddd; */
+/* background-color: #bacddd; */
+
+/* background-color: #2565AE; */
+
+background-image: url(../images/header-bg.jpg); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-shadow: 0 0 3px black, 0 0 5px black;
+
+color: #D5F3FE;
+padding: 40px;
+border-radius: 20px;
+box-shadow: 1px 1px 8px 4px #00000059;
+}
+
+  #headline
+  {
+    /* display: flex; 
+    justify-content:center;
+    align-items:center; */
+
+    text-align: center;
+    font-size: 50px;
+    font-family: yarden_bold;
+  }
+
+
+
+  #clock
+  {
+    display: flex; 
+    justify-content:center;
+    align-items:center;
+    padding: 10px;
+    font-size: 30px;
+    margin: 5 auto;
+    font-family: math;
+    border: 6px  rgb(8, 8, 8);
+    border-radius: 4px;
+  }
+
+
+.header_btn
+  {
+    display: flex; 
+    justify-content:center;
+    align-items:center;
+    padding: 5px;
+    font-size: 30px;
+    margin: 5 auto;
+    font-family: math;
+  }
+
+
+  /*החלק המרכזי - המשחק*/
+ main
+{
+
+  width: 80%;
+
+  /* display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+margin: 0 auto; */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 130px);
+  gap: 20px;
+  justify-content: center;
+margin: 0 auto;
+
+  /* grid-auto-rows: 100px; */
+  /* align-items: center; */
+  /* align-items: center; */
+}
+
+.container
+{
+  
+/* height: 800px; */
+  
+  
+}
+
+.card 
+{
+  /* justify-self: center; */
+  /* text-align: center; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* align-self: center; */
+  width: 130px;
+  height: 180px;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  background:transparent;
+  transition: transform 0.4s;
+cursor: pointer;
+border-radius: 10px;
+box-shadow: -1px 3px 4px 0px #00000066;
+}
+
+.card.is-flipped
+{
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+
+.card__face
+ {
+  position: absolute;
+  text-align:center;
+  font-size: 25px; 
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background:transparent;
+}
+
+
+.card__face--back 
+{
+  /* background-image: url(../images/רקעלקלף\ בליסמל.jpg); */
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  /* background-color: #98b3c9; */
+  background-color: #accadf;
+  color: rgb(37, 60, 97);
+  
+  transform: rotateY(180deg);
+  border: 5px solid rgb(37, 60, 97);
+  /* border: 2px solid rgb(46, 44, 44); */
+  border-radius: 10px;
+  font-family: yarden_normal;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-back-image
+{
+  border: 5px solid rgb(37, 60, 97);
+  /* border: 5px solid rgb(171, 167, 42); */
+  /* border: 2px solid rgb(46, 44, 44); */
+  border-radius: 10px;
+}
+
+
+.unit_image
+{
+  /* background:transparent; */
+  padding-top: 10px;
+  height: 50%;
+  /* padding: 8px; */
+ 
+}
+
+.container
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+}
+
+.card_text
+{
+  display: flex;
+  justify-content:center;
+  align-items:baseline;
+}
+
+
+
+
