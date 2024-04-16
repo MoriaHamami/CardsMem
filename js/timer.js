@@ -1,13 +1,15 @@
 const btnStart = $('.start');
 const btnStop = $('.stop');
-const btnReset = $('.reset');
+const btnReset = $('.reset1, .reset2');
 
 let hrs = min = sec = ms = 0, startTimer;
 let myTimeout;
 
-btnStart.on('click', () => {
-    console.log('less start:');
-    console.log('flippedCards:', flippedCards)
+btnStart.on('click', startTheTimer
+    // console.log('less start:');
+    // console.log('flippedCards:', flippedCards)
+);
+function startTheTimer(){
     btnStart.addClass('start-active');
     btnStop.removeClass('stop-active');
     isStarted = true;
@@ -27,8 +29,7 @@ btnStart.on('click', () => {
         }
         updateDisplay();
     }, 10);
-});
-
+}
 btnStop.on('click', () => {
     clearInterval(startTimer);
     btnStart.removeClass('start-active');
@@ -46,6 +47,7 @@ btnReset.on('click', () => {
     isStarted = false;
     closeAllCards();
     createBoard(localStorage.getItem('savedNumOfCards')*2);
+    closePopup()
     // updateCards()
 });
 

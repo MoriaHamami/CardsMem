@@ -1,17 +1,17 @@
 function createBoard(cardsCount) {
-    imgPathsAfterInput(cardsCount / 2)
-    console.log('updatedImGpATHS', UpdatedImgPaths)
+    imgsAfterInput(cardsCount / 2)
+    console.log('updatedImGpATHS', UpdatedImgs)
     let txt = ''
     for (let i = 0; i < cardsCount; i++) {
-        txt += `<div class="card" id="${UpdatedImgPaths[i].name}">
+        txt += `<div class="card" id="${UpdatedImgs[i].name}">
             <div class="card__face card__face--front">
                 <img class="card-back-image" src="images/צילום מסך 2024-04-10 191528.png" style="width: 130px;"
                 height="180px">
             </div>
 
             <div class="card__face card__face--back">
-                <img class="unit_image" src="${UpdatedImgPaths[i].path}" style="max-width: 100px ;max-height: 130px ;">
-                <div class="card_text" >${UpdatedImgPaths[i].name}</div>
+                <img class="unit_image" src="${UpdatedImgs[i].path}" style="max-width: 100px ;max-height: 130px ;">
+                <div class="card_text" >${UpdatedImgs[i].name}</div>
             </div>
         </div>`
     }
@@ -19,26 +19,26 @@ function createBoard(cardsCount) {
     updateCards()
 }
 
-// console.log(UpdatedImgPaths)
+// console.log(UpdatedImgs)
 
 
 
-function imgPathsAfterInput(imgCount) {
-    getImgPathsByCount(imgCount)
+function imgsAfterInput(imgCount) {
+    getImgsByCount(imgCount)
     // Have a copy of each image and shuffle
-    let imgPathsCpy = UpdatedImgPaths.slice(0);
-    UpdatedImgPaths = imgPathsCpy.concat(UpdatedImgPaths)
-    shuffle(UpdatedImgPaths)
+    let imgsCpy = UpdatedImgs.slice(0);
+    UpdatedImgs = imgsCpy.concat(UpdatedImgs)
+    shuffle(UpdatedImgs)
 }
 
-function getImgPathsByCount(count) {
-    UpdatedImgPaths = []
-    let imgPathsCpy = ImgPaths.slice(0);
+function getImgsByCount(count) {
+    UpdatedImgs = []
+    let imgsCpy = Imgs.slice(0);
     for (let i = 0; i < count; i++) {
-        var index = Math.floor(Math.random() * imgPathsCpy.length);
-        const item = imgPathsCpy[index];
-        imgPathsCpy.splice(index, 1);
-        UpdatedImgPaths.push(item)
+        var index = Math.floor(Math.random() * imgsCpy.length);
+        const item = imgsCpy[index];
+        imgsCpy.splice(index, 1);
+        UpdatedImgs.push(item)
     }
 }
 
@@ -68,8 +68,9 @@ function updateCards() {
     [...cards].forEach((card) => {
         card.addEventListener('click', function () {
             /*היפוך הקלפים כשהשעון מתחיל לרוץ*/
-            if (!isStarted ||
-                flippedCards.length == 2 ||
+            if(!isStarted){
+                startTheTimer()
+            } else if (flippedCards.length == 2 ||
                 card.classList.contains("is-found") ||
                 card.classList.contains("is-flipped")
             ) return;
@@ -92,6 +93,23 @@ function handleCards() {
         flippedCards[0].classList.add('is-found');
         flippedCards[1].classList.add('is-found');
         flippedCards = [];
+        revealedCardsCount++;
+        // console.log('revealedCardsCount:', revealedCardsCount)
+        // console.log('ocalStorage.getItem:', localStorage.getItem('savedNumOfCards'))
+        if(revealedCardsCount == localStorage.getItem('savedNumOfCards')) {
+            showPopup();
+            console.log('here');
+
+            hrs = min = sec = ms = 0;
+            clearInterval(startTimer);
+            updateDisplay();
+            btnStart.removeClass('start-active');
+            btnStop.removeClass('stop-active');
+            isStarted = false;
+            closeAllCards();
+            createBoard(localStorage.getItem('savedNumOfCards')*2);
+            // updateCards()
+        }
     }
     else {
         // closeCards()
@@ -108,6 +126,7 @@ function closeCards() {
     });
     clearTimeout(myTimeout);
     flippedCards = [];
+    revealedCardsCount = 0;
 }
 
 function closeAllCards() {
@@ -117,6 +136,7 @@ function closeAllCards() {
         card.classList.remove('is-found');
     });
     flippedCards = [];
+    revealedCardsCount = 0;
 }
 // function delay(time) {
 //     return new Promise(resolve => setTimeout(resolve, time));
