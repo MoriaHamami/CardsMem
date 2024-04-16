@@ -17,15 +17,12 @@
 </head>
 
 <body>
+    <video id="background-video" loop muted autoplay>
+        <source src="images/c27528c1-84e3-4328-a5dd-f8f51286797a.mp4" type="video/mp4">
+    </video>
 
+    
     <header>
-        <!-- <hr> -->
-        <!-- <row class="header_clk">
-            <div id="clock">00:00</div>
-        </row> -->
-        <!-- <row class="header_btn"> <button onclick="startTimer()"><i class="bi bi-caret-right"></i>START</button>
-            <button onclick="resetTimer();" ;><i class="bi bi-arrow-clockwise"></i>START AGAIN</button>
-        </row> -->
         <div class="timer">
             <div class="box">
                 <div class="buttons">
@@ -55,57 +52,24 @@
             </div>
         </div>
         <div id="headline"><b> משחק הזיכרון צהל</b></div>
-
+        
+       <span id="username-hello">שלום <div class="display_saved_name"></div></span>
+      
     </header>
 
     <main id="the_main">
 
-    <video id="background-video" loop muted autoplay>
-        <source src="images/c27528c1-84e3-4328-a5dd-f8f51286797a.mp4" type="video/mp4">
-    </video>
-    
-    <button onclick="showPopup()">הצג התראה</button>
-
-    <div id="alertPopup" class="popup">
-        !אתה תותח
+   <!-- <div id="alertPopup" class="popup">
+    <div class="display_saved_name"></div>
+    !את/ה תותח/ית
         <audio id="alertSound" src="חדר וחצי הגעתי לבוס בלי פסילות!! +שיר סיום! (mp3cut.net).mp3" preload="auto"></audio>
-        <button onclick="closePopup()" id="closebtn">סגור</button>
-    </div>
-        
-
-        <!-- <div class="card">
-            <div class="card__face card__face--front">
-                <img class="card-back-image" src="images/צילום מסך 2024-04-10 191528.png" style="width: 130px;"
-                    height="180px">
-            </div>
-
-            <div class="card__face card__face--back">
-                <img class="unit_image" src="images/cards/givaty.png" style="max-width: 100px ;max-height: 130px ;">
-                <div class="card_text">גבעתי</div>
-            </div>
-        </div>
-
-
-        <div class="card">
-            <div class="card__face card__face--front">
-                <img class="card-back-image" src="images/צילום מסך 2024-04-10 191528.png" style="width: 130px;"
-                    height="180px">
-            </div>
-
-            <div class="card__face card__face--back">
-                <img class="unit_image" src="images/bahad1.png" style="max-width: 110px ;max-height: 130px ;">
-                <div class="card_text">בה"ד 1</div>
-            </div>
-
-        </div> -->
-
-        </div>
-
+         <button onclick="closePopup()" id="closebtn">סגור</button>
+    </div> -->
+       
     </main>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <!-- <script src="script.js"></script> -->
     <script src="./js/timer.js"></script>
     <script src="./js/cards.js"></script>
     <script src="./js/main.js"></script>
@@ -113,3 +77,5 @@
 </body>
 
 </html>
+
+

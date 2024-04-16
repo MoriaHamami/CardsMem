@@ -82,6 +82,10 @@ function updateCards() {
     });
 }
 
+/******** */
+
+
+
 function handleCards() {
     if (flippedCards[0].id === flippedCards[1].id) {
         // console.log('found a match:', flippedCards[1])
@@ -117,4 +121,14 @@ function closeAllCards() {
 // function delay(time) {
 //     return new Promise(resolve => setTimeout(resolve, time));
 //   }
+
+// function gameover
+// {
+
+// }
+
+
+
+
+
 

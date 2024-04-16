@@ -1,12 +1,14 @@
 @font-face {
     font-family:yarden_bold ;
-    src: url(fonts/yarden-bold-alefalefalef.otf);
+    src: url(../fonts/yarden-bold-alefalefalef.otf);
   }
 
   @font-face {
     font-family:yarden_normal ;
-    src: url(fonts/yarden-regular-alefalefalef.otf);
+    src: url(../fonts/yarden-regular-alefalefalef.otf);
   }
+
+  /*למה הנקודות*/
 
 video#background-video {
     position: fixed;
@@ -22,16 +24,17 @@ video#background-video {
 }
 
 
+
 @keyframes slide {
     from { transform: translateX(-100%); }
     to { transform: translateX(0); }
 }
 
 
-#headline
+.text-container
 {
    
-    font-family:yarden_bold;
+   
     font-size: 130px; 
     display: flex;
     justify-content: center;
@@ -39,12 +42,10 @@ video#background-video {
 
     animation: slide 2s forwards;
 
-   
-
     margin-top: 40px;
 
 
-    color: #fff; /* צבע טקסט לבן */
+    color: #23466c; /* צבע טקסט לבן */
     text-shadow:
         0 0 5px #fff, /* צל ניאון לבן */
         0 0 10px #fff, /* צל ניאון לבן */
@@ -54,25 +55,21 @@ video#background-video {
         0 0 70px rgb(56, 56, 74), /* צל ניאון כחול */
         0 0 80px rgb(56, 56, 74), /* צל ניאון כחול */
         0 0 100px rgb(56, 56, 74); /* צל ניאון כחול */
-
+    font-family:yarden_bold;
 }
-
-
 
 
 
 .form-group
 {
-       
-    
     border: 10px;
     background-color: transparent;
     border-radius: 5px solid black;
     color: black;
- width: 30%; 
-  text-align: center;
-  font-family: yarden_normal;
-  font-size: 30px;
+    width: 30%; 
+    text-align: center;
+    font-family: yarden_normal;
+    font-size: 30px;
 }
 
 .form-control
@@ -86,38 +83,26 @@ form
      flex-direction: column;
     justify-content:center;
     margin-left: 50px;
-    margin-top: 30px;
+    margin-top: 1px;
 }
 
-.start_button
+.start
 {
-    font-family:yarden_bold;
-   margin-top: 30px;
-    margin-left: 190px;
-    font-size: 25px;
+ border: none;
+ background-color: transparent;
+
+ display: flex;
+ justify-content: start;
+ align-items: center;
+
+ margin-left: 20px;
+ margin-top: 20px;
 }
 
-
-/* .start_button
+#button_image
 {
-    
+    width: 400px;
    
-    color: black;
-    font-family:yarden_bold;
-    
-
-    margin-left: 140px;
-    margin-top: 30px;
-
-    
-
 }
 
-button
-{
-    background-color: transparent;
-    border: 10px;
-    border-radius: 5px solid black;
-   
 
-} */

@@ -45,7 +45,7 @@ btnReset.on('click', () => {
     btnStop.removeClass('stop-active');
     isStarted = false;
     closeAllCards();
-    createBoard(10);
+    createBoard(localStorage.getItem('savedNumOfCards')*2);
     // updateCards()
 });
 

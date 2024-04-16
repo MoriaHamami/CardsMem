@@ -1,123 +1,126 @@
+
+
+
 const imgPath0 = {
-    name: "הנדסה קרבית",
-    path: "images/handasa.png"
+    name: "בה''ד 1",
+    path: "images/cards/בהד1.png"
 }
 const imgPath1 = {
-    name: "גולני",
-    path: "images/golani.png"
+    name: "גבעתי",
+    path: "images/cards/גבעתי.png"
 }
 const imgPath2 = {
-    name: "בהד 1",
-    path: "images/bahad1.png"
+    name: "גולני",
+    path: "images/cards/גולני.png"
 }
 const imgPath3 = {
     name: "דובר צהל",
-    path: "images/dover.png"
+    path: "images/cards/דוברצהל.png"
 }
 const imgPath4 = {
-    name: "גבעתי",
-    path: "images/givaty.png"
+    name: "דניאל הגרי",
+    path: "images/cards/דניאל_הגרי-removebg-preview.png"
 }
 const imgPath5 = {
-    name: "מודיעין",
-    path: "images/intele.png"
+    name: "דרגת סרן",
+    path: "images/cards/דרגת_סרן.png"
 }
 const imgPath6 = {
-    name: "נחל",
-    path: "images/nahal.png"
+    name: "הרמטכל",
+    path: "images/cards/הרמטכל-removebg-preview.png"
 }
 const imgPath7 = {
-    name: "חיל הים",
-    path: "images/navy.png"
+    name: "חיל האוויר",
+    path: "images/cards/חיל האוויר.png"
 }
 const imgPath8 = {
-    name: "רפואה",
-    path: "images/rafooha.png"
+    name: "חיל הים",
+    path: "images/cards/חילהים.png"
 }
 const imgPath9 = {
-    name: "שריון",
-    path: "images/shiryon.jpg"
+    name: "טנק",
+    path: "images/cards/טנק.png"
 }
 const imgPath10 = {
-    name: "חיל האוויר",
-    path: "images/airforce.png"
+    name: "כובע ב",
+    path: "images/cards/כובע ב.png"
 }
 const imgPath11 = {
-    name: "צנחנים",
-    path: "images/para.png"
+    name: "כפיר",
+    path: "images/cards/כפיר.png"
 }
 
 const imgPath12 = {
-    name: "",
-    path: "images/para.png"
+    name: "מודיעין",
+    path: "images/cards/מודיעין.png"
 }
 const imgPath13 = {
-    name: "",
-    path: "images/para.png"
+    name: "מטוס קרב",
+    path: "images/cards/מטוס-removebg-preview.png"
 }
 const imgPath14 = {
-    name: "",
-    path: "images/para.png"
+    name: "מימיה",
+    path: "images/cards/מימיה-removebg-preview.png"
 }
 const imgPath15 = {
-    name: "",
-    path: "images/para.png"
+    name: "משטרה צבאית",
+    path: "images/cards/מצ.png"
 }
 const imgPath16 = {
-    name: "",
-    path: "images/para.png"
+    name: "משאבי אנוש",
+    path: "images/cards/משאביאנוש.png"
 }
 const imgPath17 = {
-    name: "",
-    path: "images/para.png"
+    name: "נחל",
+    path: "images/cards/נחל.png"
 }
 const imgPath18 = {
-    name: "",
-    path: "images/para.png"
+    name: "נעלי חיר",
+    path: "images/cards/נעליחיר.png"
 }
 const imgPath19 = {
-    name: "",
-    path: "images/para.png"
+    name: "שקם",
+    path: "images/cards/סמליל_כוורת_-_האגודה_למען_החייל.svg.png"
 }
 const imgPath20 = {
-    name: "",
-    path: "images/para.png"
+    name: "דרגת סמר",
+    path: "images/cards/סמר.png"
 }
 const imgPath21 = {
-    name: "",
-    path: "images/para.png"
+    name: "פיקוד העורף",
+    path: "images/cards/פיקודהעורף.png"
 }
 const imgPath22 = {
-    name: "",
-    path: "images/para.png"
+    name: "צנחנים",
+    path: "images/cards/צנחנים.png"
 }
 const imgPath23 = {
-    name: "",
-    path: "images/para.png"
+    name: "קסדה",
+    path: "images/cards/קסדה.png"
 }
 const imgPath24 = {
-    name: "",
-    path: "images/para.png"
+    name: "חיל הרפואה",
+    path: "images/cards/רפואה.png"
 }
 const imgPath25 = {
-    name: "",
-    path: "images/para.png"
+    name: "שריון",
+    path: "images/cards/שריון.png"
 }
 const imgPath26 = {
-    name: "",
-    path: "images/para.png"
+    name: "הנדסה קרבית",
+    path: "images/cards/תג_חיל_ההנדסה.png"
 }
 const imgPath27 = {
-    name: "",
-    path: "images/para.png"
+    name: "חוגר",
+    path: "images/cards/תעודת_חוגר.jpg"
 }
 const imgPath28 = {
-    name: "",
-    path: "images/para.png"
+    name: "תקשוב",
+    path: "images/cards/תקשוב.png"
 }
 const imgPath29 = {
-    name: "",
-    path: "images/para.png"
+    name: "האמר",
+    path: "images/cards/האמר.png"
 }
 
 
@@ -133,7 +136,21 @@ let UpdatedImgPaths
 
 init()
 
-function init(){
-    createBoard(10)
+function init() {
+    
+    createBoard(localStorage.getItem('savedNumOfCards')*2);
 }
 
+function saveData() {
+    let savedName = document.getElementById("valueof_name").value;
+    let savedNumOfCards = document.getElementById("valueof_numofcards").value;
+    localStorage.setItem('savedName', savedName);
+    localStorage.setItem('savedNumOfCards', savedNumOfCards);
+}
+
+
+let savedName = localStorage.getItem('savedName');
+let displayElement = document.getElementsByClassName('display_saved_name')[0];
+// let displayElement2 = document.getElementsByClassName('display_saved_name')[1];
+
+displayElement.textContent = savedName;
