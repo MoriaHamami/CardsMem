@@ -149,24 +149,24 @@ function init() {
 
 
 
-function closePopup(){
-$('#alertPopup').hide();
-console.log('here');
+function closePopup() {
+    $('#alertPopup').hide();
+    console.log('here');
 
-hrs = min = sec = ms = 0;
-clearInterval(startTimer);
-updateDisplay();
-btnStart.removeClass('start-active');
-btnStop.removeClass('stop-active');
-isStarted = false;
-closeAllCards();
-createBoard(localStorage.getItem('savedNumOfCards')*2);
+    hrs = min = sec = ms = 0;
+    clearInterval(startTimer);
+    updateDisplay();
+    btnStart.removeClass('start-active');
+    btnStop.removeClass('stop-active');
+    isStarted = false;
+    closeAllCards();
+    createBoard(localStorage.getItem('savedNumOfCards') * 2);
 }
 
-function showPopup(){
+function showPopup() {
     console.log('won:');
     $('#alertPopup').show();
     var audio = new Audio("./success.mp3");
-audio.play();
+    audio.play();
     document.getElementsByClassName('display_saved_name')[1].innerText = savedName;
 }
