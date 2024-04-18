@@ -64,9 +64,10 @@ function shuffle(array) {
 
 function updateCards() {
     cards = $('.card');
-
+    
     [...cards].forEach((card) => {
         card.addEventListener('click', function () {
+            if(hasEnded) return;
             /*היפוך הקלפים כשהשעון מתחיל לרוץ*/
             if(!isStarted){
                 startTheTimer()
@@ -88,6 +89,7 @@ function updateCards() {
 
 
 function handleCards() {
+    if(hasEnded) return;
     console.log('revealedCardsCount:', revealedCardsCount)
     console.log('ocalStorage.getItem:', localStorage.getItem('savedNumOfCards'))
     if (flippedCards[0].id === flippedCards[1].id) {

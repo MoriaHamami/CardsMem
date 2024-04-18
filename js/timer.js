@@ -10,6 +10,7 @@ btnStart.on('click', startTheTimer
     // console.log('flippedCards:', flippedCards)
 );
 function startTheTimer(){
+    if(hasEnded) return;
     btnStart.addClass('start-active');
     btnStop.removeClass('stop-active');
     isStarted = true;
@@ -43,6 +44,7 @@ function stopTheTimer(){
 
 btnReset.on('click', () => {
     // hrs = 
+    hasEnded = false;
     min = sec = ms = 0;
     clearInterval(startTimer);
     updateDisplay();
