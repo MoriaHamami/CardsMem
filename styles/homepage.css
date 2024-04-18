@@ -12,6 +12,10 @@
 
 video#background-video {
     position: fixed;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -20,6 +24,11 @@ video#background-video {
     width: 100vw;
     height: auto;
     z-index: -1;
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-video: url(../images/success.jpg); */
+
     opacity: 0.6;
 }
 
@@ -35,7 +44,7 @@ video#background-video {
 {
    
    
-    font-size: 130px; 
+    font-size: 600%; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +75,7 @@ video#background-video {
     background-color: transparent;
     border-radius: 5px solid black;
     color: black;
-    width: 30%; 
+    width: 50%; 
     text-align: center;
     font-family: yarden_normal;
     font-size: 30px;
@@ -95,8 +104,9 @@ form
  justify-content: start;
  align-items: center;
 
- margin-left: 20px;
- margin-top: 20px;
+ /* margin-left: 20px; */
+ /* margin-top: 20px; */
+ padding: 0;
 }
 
 #button_image
@@ -105,4 +115,13 @@ form
    
 }
 
-
+@media(max-width: 600px) {
+.text-container{
+font-size: 50px;
+}
+#button_image
+{
+    width: 250px;
+   margin-top: 20px;
+}
+}

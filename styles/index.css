@@ -25,7 +25,7 @@ header{
 display: flex;
 align-items: center;
 justify-content: space-between;
-width: 90%;
+/* width: 90%; */
 /* margin: 0 auto; */
 /* padding-block: 50px; */
 margin: 10px;
@@ -51,7 +51,7 @@ height: 30px;
 
   #headline
   {
-    
+    /* background-color: red; */
 
     text-align: center;
     font-size: 50px;
@@ -63,7 +63,7 @@ height: 30px;
   font-family: yarden_bold;
 
 }
-  #clock
+  /* #clock
   {
     display: flex; 
     justify-content:center;
@@ -75,7 +75,7 @@ height: 30px;
     border: 6px  rgb(8, 8, 8);
     border-radius: 4px;
     
-  }
+  } */
 
   .timer .box
   {
@@ -99,22 +99,35 @@ height: 30px;
  main
 {
 
-  width: 100%;
+  /* width: 100%; */
 
 
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(auto-fit, 130px);
   gap: 20px;
   justify-content: center;
+  align-items: center; */
+  display: flex;
+  /* flex-direction: column; */
   align-items: center;
-margin: 0 auto;
-
-
+  justify-content: space-around;
+  /* margin: 0 auto; */
+  flex-wrap: wrap;
+  /* max-lines: ; */
+  
+  
+  /* flex-shrink: 1;
+  flex-grow: 1; */
 }
 
 
 .card 
 {
+  /* margin: 0 2% 0 0; */
+  /* flex-basis: 0; */
+  /* flex: 0 1 24%; */
+
+  margin:10px;
   width: 130px;
   height: 180px;
   transform-style: preserve-3d;
@@ -207,7 +220,7 @@ margin: 0 auto;
 
 #alertPopup {
   position: relative;
-  background-image: url(../images/whatsapp-image-2017-10-19-at-94920-am.jpeg);
+  background-image: url(../images/success.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -221,7 +234,7 @@ margin: 0 auto;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 20px;
-  /* display: none; */
+  display: none;
   position: fixed;
   top: 50%; 
   left: 50%; 
@@ -240,16 +253,31 @@ text-shadow: 0 0 3px black, 0 0 5px black;
   position: absolute;
   right: 100px;
   top: 0;
+  /* background-color: #fff; */
 }
+#alertPopup .timer .frame{
+  color: white;
+  align-items: center;
+  text-shadow: 0 0 3px black, 0 0 5px black;
 
+}
+#alertPopup .timer .box{
+  background: none;
+  border: none;
+  box-shadow: none;
+}
 #alertPopup button:hover{
-  opacity: 0.7;
+  opacity: 0.5;
 }
 #alertPopup button{
 background-color: none;
 cursor: pointer;
-border-radius: 20px;
+border-radius: 50%;
 font-size: 30px;
+background: none;
+border: none;
+/* padding: 0; */
+
 /* display: flex;
 align-items: center;
 justify-content: center; */
@@ -263,3 +291,37 @@ justify-content: center; */
   font-size: 25px;
 }
 
+@media(max-width: 1000px) {
+  .timer .box{
+    padding: 2px;
+    /* width: ; */
+    background: none;
+    border: none;
+    box-shadow: none;
+    /* display: flex; */
+  }
+  
+  .timer .frame{
+    color: #accadf;
+    text-shadow: 0 0 3px black, 0 0 5px black;
+
+  }
+  
+  header #headline{
+    font-size: 20px;
+    /* background-color: red; */
+    
+  }
+#clock{
+  /* display: block; */
+  /* flex-direction: column; */
+}
+  /* .timer .reset1,.timer .start, .timer .stop{
+    padding: 0;
+    margin:0;
+  } */
+  .timer .buttons button{
+    padding: 0;
+    margin:0;
+  }
+}

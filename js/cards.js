@@ -97,17 +97,8 @@ function handleCards() {
         // console.log('revealedCardsCount:', revealedCardsCount)
         // console.log('ocalStorage.getItem:', localStorage.getItem('savedNumOfCards'))
         if(revealedCardsCount == localStorage.getItem('savedNumOfCards')) {
+            stopTheTimer();
             showPopup();
-            console.log('here');
-
-            hrs = min = sec = ms = 0;
-            clearInterval(startTimer);
-            updateDisplay();
-            btnStart.removeClass('start-active');
-            btnStop.removeClass('stop-active');
-            isStarted = false;
-            closeAllCards();
-            createBoard(localStorage.getItem('savedNumOfCards')*2);
             // updateCards()
         }
     }

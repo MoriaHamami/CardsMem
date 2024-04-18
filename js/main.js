@@ -130,9 +130,11 @@ let flippedCards = [];
 let isStarted = false;
 let revealedCardsCount = 0;
 
-
 const Imgs = [img0, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29]
 let UpdatedImgs
+
+let displayElement = document.getElementsByClassName('display_saved_name')[0];
+displayElement.textContent = savedName;
 
 init()
 
@@ -140,18 +142,25 @@ function init() {
 
     createBoard(localStorage.getItem('savedNumOfCards') * 2);
     closePopup()
+    // displayElement.textContent = savedName;
 }
 
-function saveData() {
-    let savedName = document.getElementById("valueof_name").value;
-    let savedNumOfCards = document.getElementById("valueof_numofcards").value;
-    if (savedNumOfCards > 30) return;
-    localStorage.setItem('savedName', savedName);
-    localStorage.setItem('savedNumOfCards', savedNumOfCards);
-}
+
+
+
 
 function closePopup(){
 $('#alertPopup').hide();
+console.log('here');
+
+hrs = min = sec = ms = 0;
+clearInterval(startTimer);
+updateDisplay();
+btnStart.removeClass('start-active');
+btnStop.removeClass('stop-active');
+isStarted = false;
+closeAllCards();
+createBoard(localStorage.getItem('savedNumOfCards')*2);
 }
 
 function showPopup(){
@@ -161,8 +170,3 @@ function showPopup(){
 audio.play();
     document.getElementsByClassName('display_saved_name')[1].innerText = savedName;
 }
-
-let savedName = localStorage.getItem('savedName');
-let displayElement = document.getElementsByClassName('display_saved_name')[0];
-
-displayElement.textContent = savedName;

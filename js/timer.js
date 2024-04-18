@@ -23,23 +23,27 @@ function startTheTimer(){
             min++;
             sec = 0;
         }
-        if (min == 60) {
-            hrs++;
-            min = 0;
-        }
+        // if (min == 60) {
+        //     hrs++;
+        //     min = 0;
+        // }
         updateDisplay();
     }, 10);
 }
-btnStop.on('click', () => {
+btnStop.on('click', stopTheTimer);
+
+function stopTheTimer(){
     clearInterval(startTimer);
     btnStart.removeClass('start-active');
     btnStop.addClass('stop-active');
-
+    
     isStarted = false;
-});
+
+}
 
 btnReset.on('click', () => {
-    hrs = min = sec = ms = 0;
+    // hrs = 
+    min = sec = ms = 0;
     clearInterval(startTimer);
     updateDisplay();
     btnStart.removeClass('start-active');
@@ -54,13 +58,13 @@ btnReset.on('click', () => {
 
 function updateDisplay() {
     //Formated Display
-    phrs = hrs < 10 ? '0' + hrs : hrs;
+    // phrs = hrs < 10 ? '0' + hrs : hrs;
     pmin = min < 10 ? '0' + min : min;
     psec = sec < 10 ? '0' + sec : sec;
     pms = ms < 10 ? '0' + ms : ms;
     //Output
-    $('.hrs').text(phrs);
-    $('.min').text(pmin);
-    $('.sec').text(psec);
-    $('.ms').text(pms);
+    // $('.hrs,.hrs1').text(phrs);
+    $('.min,.min1').text(pmin);
+    $('.sec,.sec1').text(psec);
+    $('.ms,.ms1').text(pms);
 }
