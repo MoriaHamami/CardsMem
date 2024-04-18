@@ -228,7 +228,7 @@ height: 30px;
   height: 400px;
 
   font-family: yarden_bold;
-  font-size: 60px;
+  font-size: 70px;
 
   border: 2px solid #000000;
   border-radius: 10px;
@@ -251,7 +251,7 @@ text-shadow: 0 0 3px black, 0 0 5px black;
 
 #alertPopup .buttons{
   position: absolute;
-  right: 100px;
+  right: 50px;
   top: 0;
   /* background-color: #fff; */
 }
@@ -259,8 +259,12 @@ text-shadow: 0 0 3px black, 0 0 5px black;
   color: white;
   align-items: center;
   text-shadow: 0 0 3px black, 0 0 5px black;
-
+  
 }
+#alertPopup .frame > * {
+  font-size: 30px;
+}
+
 #alertPopup .timer .box{
   background: none;
   border: none;
@@ -304,7 +308,7 @@ justify-content: center; */
   .timer .frame{
     color: #accadf;
     text-shadow: 0 0 3px black, 0 0 5px black;
-
+margin-inline-start: 20px;
   }
   
   header #headline{
@@ -312,10 +316,7 @@ justify-content: center; */
     /* background-color: red; */
     
   }
-#clock{
-  /* display: block; */
-  /* flex-direction: column; */
-}
+
   /* .timer .reset1,.timer .start, .timer .stop{
     padding: 0;
     margin:0;

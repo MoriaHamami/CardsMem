@@ -124,6 +124,7 @@ const img29 = {
 }
 
 
+let savedName = localStorage.getItem('savedName');
 
 let cards;
 let flippedCards = [];
@@ -151,20 +152,20 @@ function init() {
 
 function closePopup() {
     $('#alertPopup').hide();
-    console.log('here');
+    // console.log('here');
 
-    hrs = min = sec = ms = 0;
-    clearInterval(startTimer);
-    updateDisplay();
-    btnStart.removeClass('start-active');
-    btnStop.removeClass('stop-active');
+    // hrs = min = sec = ms = 0;
+    // clearInterval(startTimer);
+    // updateDisplay();
+    // btnStart.removeClass('start-active');
+    // btnStop.removeClass('stop-active');
     isStarted = false;
-    closeAllCards();
-    createBoard(localStorage.getItem('savedNumOfCards') * 2);
+    // closeAllCards();
+    // createBoard(localStorage.getItem('savedNumOfCards') * 2);
 }
 
 function showPopup() {
-    console.log('won:');
+    // console.log('won:');
     $('#alertPopup').show();
     var audio = new Audio("./success.mp3");
     audio.play();

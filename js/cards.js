@@ -88,14 +88,14 @@ function updateCards() {
 
 
 function handleCards() {
+    console.log('revealedCardsCount:', revealedCardsCount)
+    console.log('ocalStorage.getItem:', localStorage.getItem('savedNumOfCards'))
     if (flippedCards[0].id === flippedCards[1].id) {
         // console.log('found a match:', flippedCards[1])
         flippedCards[0].classList.add('is-found');
         flippedCards[1].classList.add('is-found');
         flippedCards = [];
         revealedCardsCount++;
-        // console.log('revealedCardsCount:', revealedCardsCount)
-        // console.log('ocalStorage.getItem:', localStorage.getItem('savedNumOfCards'))
         if(revealedCardsCount == localStorage.getItem('savedNumOfCards')) {
             stopTheTimer();
             showPopup();
@@ -117,7 +117,7 @@ function closeCards() {
     });
     clearTimeout(myTimeout);
     flippedCards = [];
-    revealedCardsCount = 0;
+    // revealedCardsCount = 0;
 }
 
 function closeAllCards() {
