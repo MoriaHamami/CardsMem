@@ -1,6 +1,3 @@
-
-
-
 const img0 = {
     name: "בה''ד 1",
     path: "images/cards/בהד1.png"
@@ -49,7 +46,6 @@ const img11 = {
     name: "כפיר",
     path: "images/cards/כפיר.png"
 }
-
 const img12 = {
     name: "מודיעין",
     path: "images/cards/מודיעין.png"
@@ -123,53 +119,34 @@ const img29 = {
     path: "images/cards/האמר.png"
 }
 
-
-let savedName = localStorage.getItem('savedName');
-
-let cards;
-let flippedCards = [];
-let isStarted = false;
-let revealedCardsCount = 0;
-let hasEnded = false;
-
 const Imgs = [img0, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29]
-let UpdatedImgs
 
-let displayElement = document.getElementsByClassName('display_saved_name')[0];
-displayElement.textContent = savedName;
+let savedName = localStorage.getItem('savedName')
+let cards
+let flippedCards = []
+let isStarted = false
+let revealedCardsCount = 0
+let hasEnded = false
+let UpdatedImgs
+let displayElement = document.getElementsByClassName('display_saved_name')[0]
+displayElement.textContent = savedName
 
 init()
 
 function init() {
-
-    createBoard(localStorage.getItem('savedNumOfCards') * 2);
+    createBoard(localStorage.getItem('savedNumOfCards') * 2)
     closePopup()
-    // displayElement.textContent = savedName;
 }
 
-
-
-
-
 function closePopup() {
-    $('#alertPopup').hide();
-    // console.log('here');
-    // hasEnded = true;
-    // hrs = min = sec = ms = 0;
-    // clearInterval(startTimer);
-    // updateDisplay();
-    // btnStart.removeClass('start-active');
-    // btnStop.removeClass('stop-active');
-    isStarted = false;
-    // closeAllCards();
-    // createBoard(localStorage.getItem('savedNumOfCards') * 2);
+    $('#alertPopup').hide()
+    isStarted = false
 }
 
 function showPopup() {
-    // console.log('won:');
-    hasEnded = true;
-    $('#alertPopup').show();
-    var audio = new Audio("./success.mp3");
-    audio.play();
-    document.getElementsByClassName('display_saved_name')[1].innerText = savedName;
+    hasEnded = true
+    $('#alertPopup').show()
+    var audio = new Audio("./success.mp3")
+    audio.play()
+    document.getElementsByClassName('display_saved_name')[1].innerText = savedName
 }

@@ -1,175 +1,108 @@
 @font-face {
-    font-family:yarden_bold ;
-    src: url(../fonts/yarden-bold-alefalefalef.otf);
-  }
+  font-family: yarden_bold;
+  src: url(../fonts/yarden-bold-alefalefalef.otf);
+}
 
-  @font-face {
-    font-family:yarden_normal ;
-    src: url(../fonts/yarden-regular-alefalefalef.otf);
-  }
+@font-face {
+  font-family: yarden_normal;
+  src: url(../fonts/yarden-regular-alefalefalef.otf);
+}
 
-video#background-video
-  {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 130vw;
-    height: auto;
-    z-index: -1;
-    opacity: 0.5;
+video#background-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 130vw;
+  height: auto;
+  z-index: -1;
+  opacity: 0.5;
 }
 
 /*חלק עליון*/
-header{
-display: flex;
-align-items: center;
-justify-content: space-between;
-/* width: 90%; */
-/* margin: 0 auto; */
-/* padding-block: 50px; */
-margin: 10px;
-/* background-color: #bacddd; */
-/* background-color: #bacddd; */
 
-/* background-color: #2565AE; */
-
-background-image: url(../images/header-bg.jpg); 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  background-image: url(../images/header-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   text-shadow: 0 0 3px black, 0 0 5px black;
-
-color: #D5F3FE;
-padding: 40px;
-border-radius: 20px;
-box-shadow: 1px 1px 8px 4px #00000059;
-height: 30px;
+  color: #D5F3FE;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 8px 4px #00000059;
+  height: 30px;
 }
 
-
-
-  #headline
-  {
-    /* background-color: red; */
-
-    text-align: center;
-    font-size: 50px;
-    font-family: yarden_bold;
-  }
-
-
-#username-hello{
+#headline {
+  text-align: center;
+  font-size: 50px;
   font-family: yarden_bold;
-
 }
-  /* #clock
-  {
-    display: flex; 
-    justify-content:center;
-    align-items:center;
-    padding: 4px;
-    font-size: 30px;
-    margin: 2 auto;
-    font-family: math;
-    border: 6px  rgb(8, 8, 8);
-    border-radius: 4px;
-    
-  } */
 
-  .timer .box
-  {
-    padding: 0px;
-  }
+#username-hello {
+  font-family: yarden_bold;
+}
 
+.timer .box {
+  padding: 0px;
+}
 
-.header_btn
-  {
-    display: flex; 
-    justify-content:center;
-    align-items:center;
-    padding: 5px;
-    font-size: 30px;
-    margin: 5 auto;
-    font-family: math;
-  }
-
-
-  /*החלק המרכזי - המשחק*/
- main
-{
-
-  /* width: 100%; */
-
-
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, 130px);
-  gap: 20px;
-  justify-content: center;
-  align-items: center; */
+.header_btn {
   display: flex;
-  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-size: 30px;
+  margin: 5 auto;
+  font-family: math;
+}
+
+/*החלק המרכזי - המשחק*/
+
+main {
+  display: flex;
   align-items: center;
   justify-content: space-around;
-  /* margin: 0 auto; */
   flex-wrap: wrap;
-  /* max-lines: ; */
-  
-  
-  /* flex-shrink: 1;
-  flex-grow: 1; */
 }
 
-
-.card 
-{
-  /* margin: 0 2% 0 0; */
-  /* flex-basis: 0; */
-  /* flex: 0 1 24%; */
-
-  margin:10px;
+.card {
+  margin: 10px;
   width: 130px;
   height: 180px;
   transform-style: preserve-3d;
   transform-origin: center right;
-  background:transparent;
+  background: transparent;
   transition: transform 0.4s;
   cursor: pointer;
   border-radius: 10px;
   box-shadow: -1px 3px 4px 0px #00000066;
 }
 
-.card.is-flipped
-{
+.card.is-flipped {
   transform: translateX(-100%) rotateY(-180deg);
 }
 
-
-.card__face
- {
+.card__face {
   position: absolute;
-  text-align:center;
-  font-size: 25px; 
+  text-align: center;
+  font-size: 25px;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background:transparent;
+  background: transparent;
 }
 
-
-.card__face--back 
-{
-  /* background-image: url(../images/רקעלקלף\ בליסמל.jpg); */
-  /* background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
-  /* background-color: #98b3c9; */
+.card__face--back {
   background-color: #accadf;
   color: rgb(37, 60, 97);
-  
   transform: rotateY(180deg);
   border: 5px solid rgb(37, 60, 97);
-  /* border: 2px solid rgb(46, 44, 44); */
   border-radius: 10px;
   font-family: yarden_normal;
   font-size: 25px;
@@ -179,42 +112,30 @@ height: 30px;
   align-items: center;
 }
 
-.card-back-image
-{
+.card-back-image {
   border: 5px solid rgb(37, 60, 97);
-  /* border: 5px solid rgb(171, 167, 42); */
-  /* border: 2px solid rgb(46, 44, 44); */
   border-radius: 10px;
 }
 
-
-.unit_image
-{
-  /* background:transparent; */
+.unit_image {
   padding-top: 15px;
   height: 70%;
-  /* padding: 8px; */
- 
 }
 
-.container
-{
+.container {
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-around;
+  justify-content: space-around;
   flex-basis: 0;
 }
 
-.card_text
-{
+.card_text {
   display: flex;
-  justify-content:center;
-  align-items:baseline;
-
+  justify-content: center;
+  align-items: baseline;
   line-height: 1em;
-  margin-bottom: 4px; 
+  margin-bottom: 4px;
 }
-
 
 /*התראה עבור ניצחון*/
 
@@ -226,103 +147,87 @@ height: 30px;
   background-repeat: no-repeat;
   width: 600px;
   height: 400px;
-
   font-family: yarden_bold;
   font-size: 70px;
-
   border: 2px solid #000000;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 20px;
   display: none;
   position: fixed;
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-color:white;
-text-shadow: 0 0 3px black, 0 0 5px black;
-
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 0 0 3px black, 0 0 5px black;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
-  text-align: center; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-#alertPopup .buttons{
+#alertPopup .buttons {
   position: absolute;
   right: 50px;
   top: 0;
-  /* background-color: #fff; */
 }
-#alertPopup .timer .frame{
+
+#alertPopup .timer .frame {
   color: white;
   align-items: center;
   text-shadow: 0 0 3px black, 0 0 5px black;
-  
 }
-#alertPopup .frame > * {
+
+#alertPopup .frame>* {
   font-size: 30px;
 }
 
-#alertPopup .timer .box{
+#alertPopup .timer .box {
   background: none;
   border: none;
   box-shadow: none;
 }
-#alertPopup button:hover{
+
+#alertPopup button:hover {
   opacity: 0.5;
 }
-#alertPopup button{
-background-color: none;
-cursor: pointer;
-border-radius: 50%;
-font-size: 30px;
-background: none;
-border: none;
-/* padding: 0; */
 
-/* display: flex;
-align-items: center;
-justify-content: center; */
+#alertPopup button {
+  background-color: none;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 30px;
+  background: none;
+  border: none;
 }
 
-
-#username-hello
-{
-  text-align: center;  
-  font:yarden_normal;
+#username-hello {
+  text-align: center;
+  font: yarden_normal;
   font-size: 25px;
 }
 
 @media(max-width: 1000px) {
-  .timer .box{
+  .timer .box {
     padding: 2px;
-    /* width: ; */
     background: none;
     border: none;
     box-shadow: none;
-    /* display: flex; */
-  }
-  
-  .timer .frame{
-    color: #accadf;
-    text-shadow: 0 0 3px black, 0 0 5px black;
-margin-inline-start: 20px;
-  }
-  
-  header #headline{
-    font-size: 20px;
-    /* background-color: red; */
-    
   }
 
-  /* .timer .reset1,.timer .start, .timer .stop{
+  .timer .frame {
+    color: #accadf;
+    text-shadow: 0 0 3px black, 0 0 5px black;
+    margin-inline-start: 20px;
+  }
+
+  header #headline {
+    font-size: 20px;
+  }
+
+  .timer .buttons button {
     padding: 0;
-    margin:0;
-  } */
-  .timer .buttons button{
-    padding: 0;
-    margin:0;
+    margin: 0;
   }
 }

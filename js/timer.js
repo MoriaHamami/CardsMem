@@ -1,72 +1,60 @@
-const btnStart = $('.start');
-const btnStop = $('.stop');
-const btnReset = $('.reset1, .reset2');
+const btnStart = $('.start')
+const btnStop = $('.stop')
+const btnReset = $('.reset1, .reset2')
 
-let hrs = min = sec = ms = 0, startTimer;
-let myTimeout;
+let hrs = min = sec = ms = 0, startTimer
+let myTimeout
 
-btnStart.on('click', startTheTimer
-    // console.log('less start:');
-    // console.log('flippedCards:', flippedCards)
-);
-function startTheTimer(){
-    if(hasEnded) return;
-    btnStart.addClass('start-active');
-    btnStop.removeClass('stop-active');
-    isStarted = true;
+btnStart.on('click', startTheTimer)
+btnStop.on('click', stopTheTimer)
+btnReset.on('click', resetTimer)
+
+function startTheTimer() {
+    if (hasEnded) return
+    btnStart.addClass('start-active')
+    btnStop.removeClass('stop-active')
+    isStarted = true
     startTimer = setInterval(() => {
-        ms++;//ms=ms+1;
+        ms++
         if (ms == 100) {
-            sec++;
-            ms = 0;
+            sec++
+            ms = 0
         }
         if (sec == 60) {
-            min++;
-            sec = 0;
+            min++
+            sec = 0
         }
-        // if (min == 60) {
-        //     hrs++;
-        //     min = 0;
-        // }
-        updateDisplay();
-    }, 10);
-}
-btnStop.on('click', stopTheTimer);
-
-function stopTheTimer(){
-    clearInterval(startTimer);
-    btnStart.removeClass('start-active');
-    btnStop.addClass('stop-active');
-    
-    isStarted = false;
-
+        updateDisplay()
+    }, 10)
 }
 
-btnReset.on('click', () => {
-    // hrs = 
-    hasEnded = false;
-    min = sec = ms = 0;
-    clearInterval(startTimer);
-    updateDisplay();
-    btnStart.removeClass('start-active');
-    btnStop.removeClass('stop-active');
-    isStarted = false;
-    closeAllCards();
-    createBoard(localStorage.getItem('savedNumOfCards')*2);
+function stopTheTimer() {
+    clearInterval(startTimer)
+    btnStart.removeClass('start-active')
+    btnStop.addClass('stop-active')
+    isStarted = false
+}
+
+function resetTimer() {
+    hasEnded = false
+    min = sec = ms = 0
+    clearInterval(startTimer)
+    updateDisplay()
+    btnStart.removeClass('start-active')
+    btnStop.removeClass('stop-active')
+    isStarted = false
+    closeAllCards()
+    createBoard(localStorage.getItem('savedNumOfCards') * 2)
     closePopup()
-    // updateCards()
-});
-
+}
 
 function updateDisplay() {
     //Formated Display
-    // phrs = hrs < 10 ? '0' + hrs : hrs;
-    pmin = min < 10 ? '0' + min : min;
-    psec = sec < 10 ? '0' + sec : sec;
-    pms = ms < 10 ? '0' + ms : ms;
+    pmin = min < 10 ? '0' + min : min
+    psec = sec < 10 ? '0' + sec : sec
+    pms = ms < 10 ? '0' + ms : ms
     //Output
-    // $('.hrs,.hrs1').text(phrs);
-    $('.min,.min1').text(pmin);
-    $('.sec,.sec1').text(psec);
-    $('.ms,.ms1').text(pms);
+    $('.min,.min1').text(pmin)
+    $('.sec,.sec1').text(psec)
+    $('.ms,.ms1').text(pms)
 }

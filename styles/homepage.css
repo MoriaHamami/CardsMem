@@ -1,14 +1,22 @@
 @font-face {
-    font-family:yarden_bold ;
+    font-family: yarden_bold;
     src: url(../fonts/yarden-bold-alefalefalef.otf);
-  }
+}
 
-  @font-face {
-    font-family:yarden_normal ;
+@font-face {
+    font-family: yarden_normal;
     src: url(../fonts/yarden-regular-alefalefalef.otf);
-  }
+}
 
-  /*למה הנקודות*/
+@keyframes slide {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
 
 video#background-video {
     position: fixed;
@@ -27,117 +35,95 @@ video#background-video {
     background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
-    /* background-video: url(../images/success.jpg); */
-
     opacity: 0.6;
 }
 
-
-
-@keyframes slide {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(0); }
-}
-
-
-.text-container
-{
-   
-   
-    font-size: 600%; 
+.text-container {
+    font-size: 600%;
     display: flex;
     justify-content: center;
     align-items: center;
-
     animation: slide 2s forwards;
-
     margin-top: 40px;
-
-
-    color: #23466c; /* צבע טקסט לבן */
+    color: #23466c;
+    /* צבע טקסט לבן */
     text-shadow:
-        0 0 5px #fff, /* צל ניאון לבן */
-        0 0 10px #fff, /* צל ניאון לבן */
-        0 0 20px rgb(56, 56, 74), /* צל ניאון כחול */
-        0 0 30px rgb(99, 99, 167), /* צל ניאון כחול */
-        0 0 40px rgb(98, 190, 230), /* צל ניאון כחול */
-        0 0 70px rgb(56, 56, 74), /* צל ניאון כחול */
-        0 0 80px rgb(56, 56, 74), /* צל ניאון כחול */
-        0 0 100px rgb(56, 56, 74); /* צל ניאון כחול */
-    font-family:yarden_bold;
+        0 0 5px #fff,
+        /* צל ניאון לבן */
+        0 0 10px #fff,
+        /* צל ניאון לבן */
+        0 0 20px rgb(56, 56, 74),
+        /* צל ניאון כחול */
+        0 0 30px rgb(99, 99, 167),
+        /* צל ניאון כחול */
+        0 0 40px rgb(98, 190, 230),
+        /* צל ניאון כחול */
+        0 0 70px rgb(56, 56, 74),
+        /* צל ניאון כחול */
+        0 0 80px rgb(56, 56, 74),
+        /* צל ניאון כחול */
+        0 0 100px rgb(56, 56, 74);
+    /* צל ניאון כחול */
+    font-family: yarden_bold;
 }
 
-
-
-.form-group
-{
+.form-group {
     border: 10px;
     background-color: transparent;
     border-radius: 5px solid black;
     color: black;
-    width: 50%; 
+    width: 50%;
     text-align: center;
     font-family: yarden_normal;
     font-size: 30px;
 }
 
-.form-control
-{
-    text-align:end;
+.form-control {
+    text-align: end;
 }
 
-form
-{
+form {
     display: flex;
-     flex-direction: column;
-    justify-content:center;
+    flex-direction: column;
+    justify-content: center;
     margin-left: 50px;
     margin-top: 1px;
 }
 
-.start
-{
- border: none;
- background-color: transparent;
-
- display: flex;
- justify-content: start;
- align-items: center;
-
- /* margin-left: 20px; */
- /* margin-top: 20px; */
- padding: 0;
+.start {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0;
 }
 
-#button_image
-{
+#button_image {
     width: 400px;
-   
+
 }
 
-.err{
+.err {
     font-size: 15px;
     color: rgb(242, 80, 80);
     background-color: #f5f5f580;
-    /* opacity: 0.5; */
     margin-top: 10px;
     padding-inline-end: 10px;
     border-radius: 20px;
-    width: 50%; 
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: end; */
+    width: 50%;
     display: none;
     text-align: end;
     font-weight: bold;
 }
+
 @media(max-width: 600px) {
-.text-container{
-font-size: 50px;
-}
-#button_image
-{
-    width: 250px;
-   margin-top: 20px;
-}
+    .text-container {
+        font-size: 50px;
+    }
+
+    #button_image {
+        width: 250px;
+        margin-top: 20px;
+    }
 }
