@@ -23,6 +23,7 @@ function saveData() {
 }
 
 let savedName = localStorage.getItem('savedName');
+
 function showInputErr(){
     $('.err').show();
 }
