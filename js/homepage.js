@@ -19,7 +19,7 @@ function saveData() {
     if (!(savedNumOfCards <= 30 && savedNumOfCards >0) || savedNumOfCards === 0) return showInputErr();
     localStorage.setItem('savedName', savedName);
     localStorage.setItem('savedNumOfCards', savedNumOfCards);
-    location.href = '../index.html'
+    location.href = './index.html'
 }
 
 let savedName = localStorage.getItem('savedName');
