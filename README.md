@@ -3,7 +3,7 @@
 ## Overview
 This project is a classic **Memory Game** designed to be interactive, responsive, and customizable. The user inputs their name and the number of card pairs they'd like to play with (up to 30 pairs), and the game begins. The objective is to match all card pairs, with a timer tracking the player's progress. Once all pairs are matched, the total time is displayed, and the user is given the option to play again.
 
-![Main page](public/styles/imgs/readme.png "Main-page")
+![Main page](images/readme.png "Main-page")
 
 ## Features
 - **Customizable Game Settings**: Players can choose the number of card pairs they want (up to 30 pairs).
